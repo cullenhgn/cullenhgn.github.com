@@ -2,17 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cullenhgn</title>
-    <description>Testing testing 1, 2, 3?
-</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Jun 2016 22:55:41 -0500</pubDate>
-    <lastBuildDate>Fri, 17 Jun 2016 22:55:41 -0500</lastBuildDate>
+    <description>wannabe coder</description>
+    <link>https://cullenhgn.github.io/</link>
+    <atom:link href="https://cullenhgn.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 18 Jun 2016 23:58:30 -0500</pubDate>
+    <lastBuildDate>Sat, 18 Jun 2016 23:58:30 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Hello World!</title>
-        <description>&lt;p&gt;Stumbling through Jekyll…&lt;/p&gt;
+        <title>Hello World</title>
+        <description>&lt;p&gt;HELLO WORLD?!&lt;/p&gt;
 
 &lt;p&gt;Add more later.&lt;/p&gt;
 
@@ -25,14 +24,14 @@
 &lt;p&gt;Now let’s try linking to my &lt;a href=&quot;http://cullenhogan.com&quot;&gt;dumb website&lt;/a&gt;?&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 17 Jun 2016 22:36:54 -0500</pubDate>
-        <link>/jekyll/update/2016/06/17/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">/jekyll/update/2016/06/17/welcome-to-jekyll.html</guid>
+        <pubDate>Sat, 18 Jun 2016 09:34:45 -0500</pubDate>
+        <link>https://cullenhgn.github.io/python/codefights/2016/06/18/Hello-World.html</link>
+        <guid isPermaLink="true">https://cullenhgn.github.io/python/codefights/2016/06/18/Hello-World.html</guid>
         
         
-        <category>jekyll</category>
+        <category>python</category>
         
-        <category>update</category>
+        <category>codefights</category>
         
       </item>
     

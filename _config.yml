@@ -1,19 +1,49 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 title: cullenhgn
-email: cullenhogan@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Testing testing 1, 2, 3?
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-twitter_username: CULLENCULLENCUL
-github_username:  cullenhgn
+description: wannabe coder
+author: Cullen Hogan
+github: https://github.com/cullenhgn
+about: Just my little slice of the web to try and keep track of tinkering around with mostly Python.
+disqus_shortname: cullenhgn
+google_analytics: ""
 
-# Build settings
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "#"
+    - icon: fa-skype
+      link: "#"
+    - icon: fa-twitter
+      link: "https://twitter.com/cullenhgn"
+    - icon: fa-linkedin
+      link: "#"
+    - icon: fa-stack-exchange
+      link: "#"
+
+share:
+  twitter_username: cullenhgn
+  fb_appid: ""
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: Github
+      url: https://github.com/cullenhgn
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://cullenhgn.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
 markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
