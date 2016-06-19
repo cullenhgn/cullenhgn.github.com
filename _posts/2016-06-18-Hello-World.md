@@ -42,7 +42,7 @@ plt.show()
 ```
 
 
-![png](https://raw.githubusercontent.com/cullenhgn/cullenhgn.github.io/master/static/img/_posts/output_2_0.png)
+![png](https://github.com/cullenhgn/cullenhgn.github.io/blob/master/static/img/_posts/output_2_0.png?raw=true "test")
 
 
 
