@@ -2,7 +2,7 @@
 layout: post
 title:  "Hello World"
 date:   2016-06-18 21:34:45 +0700
-categories: [python, codefights]
+categories: [ramblings]
 ---
 
 I've been wanting to start a blog dedicated to my attempts/progress at coding for quite awhile now.  Finally getting around to this thanks to github offering [`free hosting`][free hosting]!  This was a natural fit since the blog is really just a way for me to keep track of random coding projects, which would likely have been kept on github anyways.

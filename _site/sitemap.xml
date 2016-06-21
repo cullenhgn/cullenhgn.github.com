@@ -5,8 +5,8 @@
     <description>wannabe coder</description>
     <link>https://cullenhgn.github.io/</link>
     <atom:link href="https://cullenhgn.github.io/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jun 2016 13:21:53 -0500</pubDate>
-    <lastBuildDate>Sun, 19 Jun 2016 13:21:53 -0500</lastBuildDate>
+    <pubDate>Mon, 20 Jun 2016 22:55:30 -0500</pubDate>
+    <lastBuildDate>Mon, 20 Jun 2016 22:55:30 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -26,13 +26,11 @@ There were lot of little things that went in to getting this first post together
 
 </description>
         <pubDate>Sat, 18 Jun 2016 09:34:45 -0500</pubDate>
-        <link>https://cullenhgn.github.io/python/codefights/2016/06/18/Hello-World.html</link>
-        <guid isPermaLink="true">https://cullenhgn.github.io/python/codefights/2016/06/18/Hello-World.html</guid>
+        <link>https://cullenhgn.github.io/ramblings/2016/06/18/Hello-World.html</link>
+        <guid isPermaLink="true">https://cullenhgn.github.io/ramblings/2016/06/18/Hello-World.html</guid>
         
         
-        <category>python</category>
-        
-        <category>codefights</category>
+        <category>ramblings</category>
         
       </item>
     
