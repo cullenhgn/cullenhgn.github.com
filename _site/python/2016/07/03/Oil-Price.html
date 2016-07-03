@@ -6,16 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
-        <title>Hello World - cullenhgn</title>
+        <title>(Very) Basic Plotting of Daily Oil Price - cullenhgn</title>
         <meta name="author" content="Cullen Hogan" />
-        <meta name="description" content="Hello World" />
-        <meta name="keywords" content="Hello World, cullenhgn, ramblings" />
+        <meta name="description" content="(Very) Basic Plotting of Daily Oil Price" />
+        <meta name="keywords" content="(Very) Basic Plotting of Daily Oil Price, cullenhgn, python" />
         <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
         <meta content="" property="fb:app_id">
         <meta content="cullenhgn" property="og:site_name">
         
-          <meta content="Hello World" property="og:title">
+          <meta content="(Very) Basic Plotting of Daily Oil Price" property="og:title">
         
         
           <meta content="article" property="og:type">
@@ -24,10 +24,10 @@
           <meta content="wannabe coder" property="og:description">
         
         
-          <meta content="https://cullenhgn.github.io/ramblings/2016/06/18/Hello-World.html" property="og:url">
+          <meta content="https://cullenhgn.github.io/python/2016/07/03/Oil-Price.html" property="og:url">
         
         
-          <meta content="2016-06-18T09:34:45-05:00" property="article:published_time">
+          <meta content="2016-07-03T02:39:45-05:00" property="article:published_time">
           <meta content="https://cullenhgn.github.io/about/" property="article:author">
         
         
@@ -35,7 +35,7 @@
         
         
           
-          <meta content="ramblings" property="article:section">
+          <meta content="python" property="article:section">
           
         
         
@@ -46,10 +46,10 @@
         <meta name="twitter:site" content="@cullenhgn">
         <meta name="twitter:creator" content="@cullenhgn">
         
-          <meta name="twitter:title" content="Hello World">
+          <meta name="twitter:title" content="(Very) Basic Plotting of Daily Oil Price">
         
         
-          <meta name="twitter:url" content="https://cullenhgn.github.io/ramblings/2016/06/18/Hello-World.html">
+          <meta name="twitter:url" content="https://cullenhgn.github.io/python/2016/07/03/Oil-Price.html">
         
         
           <meta name="twitter:description" content="wannabe coder">
@@ -133,27 +133,62 @@
             </div>
 
             <div class="col-sm-8 col-offset-1">
-                <h1>Hello World</h1>
-<span class="time">18 Jun 2016</span>
+                <h1>(Very) Basic Plotting of Daily Oil Price</h1>
+<span class="time">03 Jul 2016</span>
 
 <span class="categories">
-    &raquo; <a href="/category/ramblings">ramblings</a>
+    &raquo; <a href="/category/python">python</a>
 </span>
 
 
 <div class="content">
-    <div class="post"><p>I’ve been wanting to start a blog dedicated to my attempts/progress at coding for quite awhile now.  Finally getting around to this thanks to github offering <a href="https://pages.github.com"><code class="highlighter-rouge">free hosting</code></a>!  This was a natural fit since the blog is really just a way for me to keep track of random coding projects, which would likely have been kept on github anyways.</p>
+    <div class="post"><p>Learning the basics of plotting data with Python is probably what these first few posts will be about.</p>
 
-<p>Most of my projects will probably be Python based, since I’m looking to become more proficient with the overall scientific Python based libraries.  This means you can expect lots of posts related to numpy, scipy, and matplotlib.</p>
+<p>This first example is showing how it’s pretty easy to download a csv file, and then convert it into a pandas dataframe to whip up a quick figure.  You can see that this can be done with just a handful of code (probably even less than I used).  The full <a href="https://github.com/cullenhgn/python-notebooks/blob/master/02_Oil-Price/Oil-Price.ipynb"><code class="highlighter-rouge">ipython notebook</code></a> has the same code below but with a little more explanation, and shows one of the <em>small</em> qwerks I ran into.</p>
 
-<p>Aside from that we’ll just see where this crazy project leads!</p>
+<hr />
 
-<p><img src="https://github.com/cullenhgn/cullenhgn.github.io/blob/master/static/img/_posts/output_2_0.png?raw=true" alt="png" title="test" /></p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># import libraries</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 
-<p>i-python notebook: <a href="https://github.com/cullenhgn/python-notebooks/blob/master/Hello-World/Hello-World.ipynb"><code class="highlighter-rouge">--&gt;here&lt;--</code></a></p>
+<span class="c"># change the default plotting style to something nicer</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">'ggplot'</span><span class="p">)</span>
 
-<p>P.S.
-There were lot of little things that went in to getting this first post together, which I’ll probably go into more detail later.  For instance, this site is put together with markdown using <a href="https://jekyllrb.com"><code class="highlighter-rouge">Jekyll</code></a>, and the “Hello World” image was made with the matplotlib <a href="http://matplotlib.org/examples/showcase/xkcd.html"><code class="highlighter-rouge">xkcd styling</code></a>! So I already learned quite a bit with just this first post.</p>
+<span class="c"># import csv file</span>
+<span class="c"># data from https://fred.stlouisfed.org/series/DCOILWTICO/downloaddata</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'DCOILWTICO.csv'</span><span class="p">)</span>
+
+<span class="c"># convert date column to datetime</span>
+<span class="n">df</span><span class="p">[</span><span class="s">'DATE'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'DATE'</span><span class="p">])</span>
+
+<span class="c"># setup basic line plot, change line color from red to green</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'DATE'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'VALUE'</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s">'#31a354'</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c"># change the legend lable from "VALUE" to "Oil Price ($)"</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s">'upper left'</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="s">'x-large'</span><span class="p">)</span>
+<span class="n">L</span><span class="o">.</span><span class="n">get_texts</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s">'Oil Price ($)'</span><span class="p">)</span>
+
+<span class="c"># edit axis labels and font size</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">"Price of Oil for last 30 years"</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"Time"</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"Oil Price ($)"</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span>
+
+<span class="c"># save the figure at a good resolution</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">'oilprice.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></code></pre></figure>
+
+<hr />
+
+<p>This results in the nice figure below.
+<img src="https://raw.githubusercontent.com/cullenhgn/python-notebooks/master/02_Oil-Price/oilprice.png" alt="png" title="test" /></p>
+
+<p>One of my long term goals is to eventually create a permanent dashboard that reads data such as the current oil/natural gas price, rig counts, and other reports which will be automatically generated into nice looking displays.</p>
+
+<p>But for now this is a great start!</p>
 
 </div>
     <div class="share-page">
@@ -168,7 +203,7 @@ There were lot of little things that went in to getting this first post together
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <!-- Facebook -->
-    <div class="fb-share-button" data-href="https://cullenhgn.github.io/ramblings/2016/06/18/Hello-World.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+    <div class="fb-share-button" data-href="https://cullenhgn.github.io/python/2016/07/03/Oil-Price.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
 </div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -200,8 +235,8 @@ There were lot of little things that went in to getting this first post together
 
 <div class="PageNavigation">
   
+    <a class="prev" href="/ramblings/2016/06/18/Hello-World.html">&laquo; Hello World</a>
   
-    <a class="next" href="/python/2016/07/03/Oil-Price.html">(Very) Basic Plotting of Daily Oil Price &raquo;</a>
   
 </div>
 
@@ -212,8 +247,8 @@ There were lot of little things that went in to getting this first post together
         /* <![CDATA[ */
 
         var disqus_shortname = "cullenhgn";
-        var disqus_identifier = "https://cullenhgn.github.io_Hello World";
-        var disqus_title = "Hello World";
+        var disqus_identifier = "https://cullenhgn.github.io_(Very) Basic Plotting of Daily Oil Price";
+        var disqus_title = "(Very) Basic Plotting of Daily Oil Price";
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
